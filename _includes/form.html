@@ -7,21 +7,22 @@
         var ship = document.getElementById("shipSelect").value;
         var fileName = "Slipstream Rogue Space - " + level + " " + runType + " " + glitch + " (" + ship + ").lss";
 
-        // Download the file from splits/fileName
+        // Open a new window with the file
+        window.open("splits/" + fileName, "_blank");
+    }
 
-        // Create a new element to download the file
-        var element = document.createElement('a');
-        element.setAttribute('href', 'splits/' + fileName);
-        element.setAttribute('download', fileName);
+    function copyDownloadLink() {
+        // Copies the link to the file with the selected options to the user's clipboard
+        var level = document.getElementById("levelSelect").value;
+        var runType = document.getElementById("runType").value;
+        var glitch = document.getElementById("glitch").value;
+        var ship = document.getElementById("shipSelect").value;
+        var fileName = "Slipstream Rogue Space - " + level + " " + runType + " " + glitch + " (" + ship + ").lss";
 
-        // Append the element to the body
-        document.body.appendChild(element);
-        
-        // Click the element to download the file
-        element.click();
+        var link = window.location.href + "splits/" + fileName;
 
-        // Remove the element from the body
-        document.body.removeChild(element);
+        navigator.clipboard.writeText(link);
+        document.getElementById("copy").innerHTML = "Copied!";
     }
 </script>
 
@@ -49,5 +50,6 @@
         <option value="Sparrow">Sparrow</option>
     </select>
 
-    <input type="submit" value="Download">
+    <button onclick="downloadSplit()">Download</button>
+    <button id="copy" onclick="copyDownloadLink()">Copy Link</button>
 </form>
