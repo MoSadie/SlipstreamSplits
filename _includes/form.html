@@ -23,6 +23,13 @@
 
         navigator.clipboard.writeText(link);
         document.getElementById("copy").innerHTML = "Copied!";
+
+        setTimeout(resetCopyButton, 3000);
+    }
+
+    function resetCopyButton() {
+        // Resets the copy button to its original text
+        document.getElementById("copy").innerHTML = "Copy Link";
     }
 </script>
 
