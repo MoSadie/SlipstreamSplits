@@ -5,19 +5,19 @@
 ## Pluto
 
 {% for file in pluto_splits %}
-- [{{ file.basename }}]({{ file.path }})
+- [{{ file.basename }}]({{ file.path | replace: "%", "%25"}})
 {% endfor %}
 
 ## Charon
 
 {% for file in charon_splits %}
-- [{{ file.basename }}]({{ file.path }})
+- [{{ file.basename }}]({{ file.path | replace: "%", "%25"}})
 {% endfor %}
 
 ## Neptune
 
 {% for file in neptune_splits %}
-- [{{ file.basename }}]({{ file.path }})
+- [{{ file.basename }}]({{ file.path | replace: "%", "%25"}})
 {% endfor %}
 
 [Return Home](/)
