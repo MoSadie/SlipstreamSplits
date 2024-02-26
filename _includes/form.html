@@ -1,0 +1,53 @@
+<script>
+    function downloadSplit() {
+        // Downloads the file with the selected options to the user's computer
+        var level = document.getElementById("levelSelect").value;
+        var runType = document.getElementById("runType").value;
+        var glitch = document.getElementById("glitch").value;
+        var ship = document.getElementById("shipSelect").value;
+        var fileName = "Slipstream Rogue Space - " + level + " " + runType + " " + glitch + " (" + ship + ").lss";
+
+        // Download the file from splits/fileName
+
+        // Create a new element to download the file
+        var element = document.createElement('a');
+        element.setAttribute('href', 'splits/' + fileName);
+        element.setAttribute('download', fileName);
+
+        // Append the element to the body
+        document.body.appendChild(element);
+        
+        // Click the element to download the file
+        element.click();
+
+        // Remove the element from the body
+        document.body.removeChild(element);
+    }
+</script>
+
+<form onSubmit="downloadSplit()">
+
+    <select id="levelSelect">
+        <option value="Pluto" default>Pluto</option>
+        <option value="Charon">Charon</option>
+        <option value="Neptune">Neptune</option>
+    </select>
+
+    <select id="runType">
+        <option value="Any%" default>Any%</option>
+        <option value="100%">100%</option>
+    </select>
+
+    <select id="glitch">
+        <option value="Glitchless" default>Glitchless</option>
+        <option value="Glitched">Glitched</option>
+    </select>
+
+    <select id="shipSelect">
+        <option value="Firecrest" default>Firecrest</option>
+        <option value="Hedgehog">Hedgehog</option>
+        <option value="Sparrow">Sparrow</option>
+    </select>
+
+    <input type="submit" value="Download">
+</form>

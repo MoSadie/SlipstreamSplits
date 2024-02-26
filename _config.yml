@@ -1,0 +1,22 @@
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+
+show_downloads: false
+
+github:
+  is_project_page: false
+
+defaults:
+  - scope:
+      path: "splits/Slipstream Rogue Space - Pluto*"
+    values:
+      pluto: true
+  - scope:
+      path: "splits/Slipstream Rogue Space - Neptune*"
+    values:
+      neptune: true
+  - scope:
+      path: "splits/Slipstream Rogue Space - Charon*"
+    values:
+      charon: true
