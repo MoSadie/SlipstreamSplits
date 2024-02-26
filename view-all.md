@@ -20,4 +20,4 @@
 - [{{ file.basename }}]({{ file.path }})
 {% endfor %}
 
-[Return Home](index)
+[Return Home](/)
