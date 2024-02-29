@@ -24,4 +24,3 @@ defaults:
       path: "splits/Slipstream Rogue Space - Triton*"
     values:
       triton: true
-    
