@@ -23,7 +23,7 @@
 
 ## Triton
 
-{$ for file in triton_splits %}
+{% for file in triton_splits %}
 - [{{ file.basename }}]({{ file.path | replace: "%", "%25"}})
 {% endfor %}
 
