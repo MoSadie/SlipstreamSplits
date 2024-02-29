@@ -20,3 +20,8 @@ defaults:
       path: "splits/Slipstream Rogue Space - Charon*"
     values:
       charon: true
+  - scope:
+      path: "splits/Slipstream Rogue Space - Triton*"
+    values:
+      triton: true
+    
